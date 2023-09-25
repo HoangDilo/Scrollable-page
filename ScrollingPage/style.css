@@ -118,6 +118,7 @@ button:active {
 
 .container-2 {
     background-image: url('./Assets/LongPage/bg_1.svg');
+    background-color: #FBFAFF;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -578,7 +579,7 @@ p {
     top: 120px;
     border-radius: 20px;
     display: flex;
-    background-color: rgb(255, 114, 114);
+    background-color: rgb(255, 169, 169);
     width: 400px;
     height: 80px;
     font-family: 'Poppins';
@@ -591,11 +592,20 @@ p {
     color: rgb(169, 0, 0);
 }
 .valid {
-    background-color: rgb(77, 255, 106);
+    background-color: rgb(141, 255, 160);
     color: rgb(0, 128, 21);
 }
 .display {
     visibility: visible;
+    animation: fadein 1s, fadeout 1s 3s;
+}
+@keyframes fadein {
+    from {right: -100px; opacity: 0;}
+    to {right: 0px; opacity: 1;}
+}
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 .list-toasts {
     display: flex;

@@ -15,7 +15,10 @@ function handleScroll() {
 }
 
 function goTop() {
-    DOM.scrollTop = 0;
+    window.scrollTo({
+        top: 0, 
+        behavior: "smooth",
+    });
 }
 
 function handleSubmit() {
@@ -45,7 +48,7 @@ function handleSubmit() {
         setTimeout(() => {
             error_DOM.className = 'toast-message-invalid';
             toasts_DOM.removeChild(toasts_DOM.children[0]);
-        }, 3000);
+        }, 4000);
     }
     else if (empty_count === 0) {
         if (!validateEmail()) {
@@ -67,7 +70,7 @@ function handleSubmit() {
             //console.log(toasts_DOM);
             setTimeout(() => {
                 toasts_DOM.removeChild(toasts_DOM.children[0]);
-            }, 3000);
+            }, 4000);
         } else {
             const error_DOM = document.createElement("div");
             error_DOM.className = 'toast-message-invalid valid';
@@ -85,7 +88,7 @@ function handleSubmit() {
             //console.log(toasts_DOM);
             setTimeout(() => {
                 toasts_DOM.removeChild(toasts_DOM.children[0]);
-            }, 3000);
+            }, 4000);
 
             name_project_DOM.value = '';
             email_DOM.value = '';
